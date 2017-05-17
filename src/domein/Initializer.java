@@ -5,7 +5,6 @@
  */
 package domein;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,42 +18,42 @@ public class Initializer {
 
     public Initializer() {
         paren  = Arrays.asList(new Paar[]{
-            new Paar("un arbre", ""),
-            new Paar("un garçon", ""),
-            new Paar("une fille", ""),
-            new Paar("une pomme", ""),
-            new Paar("une maison", ""),
-            new Paar("une balle", ""),
-            new Paar("un chien", ""),
-            new Paar("un chat", ""),
-            new Paar("un cheval", ""),
-            new Paar("un chaise", ""),
-            new Paar("une étoile", ""),
-            new Paar("un manteau", ""),
-            new Paar("un bateau", ""),
-            new Paar("la mer", ""),
-            new Paar("une poupée", ""),
-            new Paar("un livre", ""),
-            new Paar("un poisson", ""),
-            new Paar("le soleil", ""),
-            new Paar("une glace", ""),
-            new Paar("une fleur", ""),
-            new Paar("une vache", ""),
-            new Paar("une table", ""),
-            new Paar("un ours", ""),
-            new Paar("une chaussette", ""),
-            new Paar("un verre", ""),
-            new Paar("rouge", ""),
-            new Paar("vert", ""),
-            new Paar("jaune", ""),
-            new Paar("bleu", ""),
-            new Paar("un papier", ""),
-            new Paar("un pendule", ""),
-            new Paar("un cochon", ""),
-            new Paar("une clef", ""),
-            new Paar("une armoire", ""),
-            new Paar("une chaussure", ""),
-            new Paar("une voiture", "")
+            new Paar("un arbre", "boom.png"),
+            new Paar("un garçon", "jongen.jpg"),
+            new Paar("une fille", "meisje.jpg"),
+            new Paar("une pomme", "appel.jpg"),
+            new Paar("une maison", "huis.jpg"),
+            new Paar("une balle", "bal.png"),
+            new Paar("un chien", "hond.png"),
+            new Paar("un chat", "kat.png"),
+            new Paar("un cheval", "paard.png"),
+            new Paar("un chaise", "stoel.jpg"),
+            new Paar("une étoile", "ster.png"),
+            new Paar("un manteau", "jas.jpg"),
+            new Paar("un bateau", "boot.png"),
+            new Paar("la mer", "zee.jpg"),
+            new Paar("une poupée", "pop.jpg"),
+            new Paar("un livre", "boek.png"),
+            new Paar("un poisson", "vis.png"),
+            new Paar("le soleil", "zon.png"),
+            new Paar("une glace", "ijs.png"),
+            new Paar("une fleur", "bloem.png"),
+            new Paar("une vache", "koe.jpg"),
+            new Paar("une table", "tafel.png"),
+            new Paar("un ours", "beer.jpg"),
+            new Paar("une chaussette", "kous.png"),
+            new Paar("un verre", "glas.jpg"),
+            new Paar("rouge", "rood.jpg"),
+            new Paar("vert", "groen.png"),
+            new Paar("jaune", "geel.jpg"),
+            new Paar("bleu", "blauw.jpg"),
+            new Paar("un papier", "papier.png"),
+            new Paar("un pendule", "klok.png"),
+            new Paar("un cochon", "varken.jpg"),
+            new Paar("une clef", "sleutel.jpg"),
+            new Paar("une armoire", "kast.jpg"),
+            new Paar("une chaussure", "schoen.png"),
+            new Paar("une voiture", "auto.jpg")
         });
     }
 
