@@ -11,8 +11,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -29,12 +36,21 @@ public class BordSchermController extends Pane {
 
     private final DomeinController controller;
     private List<String> lijst = new ArrayList<>();
-    private ImageView tijdelijk;
+    private ImageView eersteOmgedraaid;
+    private ImageView tweedeOmgedraaid;
+    private int aantalGevondenParen=0;
+    
     // <editor-fold defaultstate="collapsed" desc=" attributen FXML ">
     @FXML
     private GridPane gridPane;
+    @FXML
+    private Label lblMelding;
+    @FXML
+    private Button btnControlleer;
+    @FXML
+    private Label lblEinde;
     // </editor-fold>
-   
+    
 
     public BordSchermController(DomeinController controller, Stage stage) {
         this.controller = controller;
@@ -53,9 +69,10 @@ public class BordSchermController extends Pane {
         // </editor-fold>       
 
         // <editor-fold defaultstate="collapsed" desc=" Invullen kaarten">
-        for(int i=0; i<6; i++){
-            for(int j=0; j<5; j++){
-                ImageView imageview =  new ImageView(new Image("/images/achtergrond.png"));
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 5; j++) {
+                ImageView imageview = new ImageView(new Image("/images/achtergrond.png"));
+                imageview.setOnMouseClicked(omDraaien);
                 gridPane.add(imageview, j, i);
             }
         }
@@ -63,24 +80,62 @@ public class BordSchermController extends Pane {
         stage.show();
     }
 
-    private void draaiOm(MouseEvent event) {
-//        ++teller;
-//
-//        ImageView imgView = (ImageView) event.getSource();
-//        if (teller == 1) {
-//            tijdelijk = imgView;
-//        }
-//        vulImageIn(imgView.getId());
-//        if (teller == 2) {
-//           
-//            zetOpAchtergrond(tijdelijk.getId());
-//            zetOpAchtergrond(imgView.getId());
-//            teller = 0;
-//        }
-    }
-    
-    private void zetOpAchtergrond(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    final EventHandler<MouseEvent> omDraaien = new EventHandler<MouseEvent>() {
+        @Override
+        public void handle(final MouseEvent event) {
+            System.out.println("je hebt geklikt");
+            ImageView imgView = (ImageView) event.getSource();
+            int rij = GridPane.getRowIndex(imgView);
+            int kolom = GridPane.getColumnIndex(imgView);
+            int indexLijst = rij * 5 + kolom;
+            if (eersteOmgedraaid == null) {
+                imgView.setImage(new Image(lijst.get(indexLijst)));
+                eersteOmgedraaid = imgView;
+            } else if (tweedeOmgedraaid == null) {
+                imgView.setImage(new Image(lijst.get(indexLijst)));
+                tweedeOmgedraaid = imgView;
+            } else {
+                lblMelding.setText("Tu as déjà tourné deux cartes. D'abord controlle les ... ");
+            }
+        }
+    };
+
+    @FXML
+    private void controlleer(ActionEvent event) {
+        System.out.println("je hebt gecontroleerd");
+
+        if (eersteOmgedraaid == null || tweedeOmgedraaid == null) {
+            lblMelding.setText("Tu n'a pas tourné deux cartes!");
+        } else {
+            int rijEerste = GridPane.getRowIndex(eersteOmgedraaid);
+            int kolomEerste = GridPane.getColumnIndex(eersteOmgedraaid);
+            int indexLijstEerste = rijEerste * 5 + kolomEerste;
+
+            int rij = GridPane.getRowIndex(tweedeOmgedraaid);
+            int kolom = GridPane.getColumnIndex(tweedeOmgedraaid);
+            int indexLijst = rij * 5 + kolom;
+            if (controller.isPaar(lijst.get(indexLijst), lijst.get(indexLijstEerste))) {
+                //Deze twee niet meer aanklikken!
+                eersteOmgedraaid.setOnMouseClicked(null);
+                tweedeOmgedraaid.setOnMouseClicked(null);
+                lblMelding.setText("Bravo! Ces deux cartes sont un couple!");
+                aantalGevondenParen++;
+                if(aantalGevondenParen ==15){
+                    btnControlleer.setDisable(true);
+                    lblEinde.setText("Bravo!!!! Vous avez trouvé tous les couples!!!");
+                }
+            } else {
+                lblMelding.setText("Dommage! Ces deux cartes ne sont pas un couple!");
+                eersteOmgedraaid.setImage(new Image("/images/achtergrond.png"));
+                tweedeOmgedraaid.setImage(new Image("/images/achtergrond.png"));
+
+            }
+            eersteOmgedraaid = null;
+            tweedeOmgedraaid = null;
+            
+        }
+        
+        
     }
 
 //    private void vulImageIn(String id) {
@@ -276,8 +331,5 @@ public class BordSchermController extends Pane {
 //                img45.setImage(new Image("/images/achtergrond.png"));
 //                break;
 //        }
-
 //    }
-
-    
 }

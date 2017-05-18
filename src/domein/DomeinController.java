@@ -54,8 +54,7 @@ public class DomeinController {
         }
 
         if (paar1 != null && paar2 != null && paar1 == paar2) {
-            geefHuidigeSpeler().voegPaarToe();
-            paren.remove(paar1);
+//            geefHuidigeSpeler().voegPaarToe();
             return true;
         }
 
