@@ -28,10 +28,9 @@ public class DomeinController {
 
     public List<String> selecteer() {
         List<Paar> gekozenParen = new ArrayList<>();
-        SecureRandom will = new SecureRandom();       
-        int willIndex = will.nextInt(paren.size()); 
+        SecureRandom random = new SecureRandom();
         for (int i = 0; i < 15; i++) {
-            gekozenParen.add(paren.get(willIndex++));
+            gekozenParen.add(paren.get(random.nextInt(paren.size())));
         }
 
         List<String> uitvoer = new ArrayList<>();
@@ -72,7 +71,11 @@ public class DomeinController {
     }
 
     public void geefBeurtAanVolgendeSpeler() {
-        if(huidigeSpeler+1 > 1) huidigeSpeler=0; else huidigeSpeler++;
+        if (huidigeSpeler + 1 > 1) {
+            huidigeSpeler = 0;
+        } else {
+            huidigeSpeler++;
+        }
     }
 
 }
