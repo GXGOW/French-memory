@@ -26,12 +26,12 @@ public class DomeinController {
         huidigeSpeler = 0;
     }
 
-    public List<String> selecteer(int aantal) {
+    public List<String> selecteer() {
         List<Paar> gekozenParen = new ArrayList<>();
-        SecureRandom will = new SecureRandom();
-        for (int i = 0; i < aantal; i++) {
-            int willIndex = will.nextInt(paren.size());
-            gekozenParen.add(paren.remove(willIndex));
+        SecureRandom will = new SecureRandom();       
+        int willIndex = will.nextInt(paren.size()); 
+        for (int i = 0; i < 15; i++) {
+            gekozenParen.add(paren.get(willIndex++));
         }
 
         List<String> uitvoer = new ArrayList<>();
