@@ -31,7 +31,7 @@ public class DomeinController {
         SecureRandom will = new SecureRandom();       
         int willIndex = will.nextInt(paren.size()); 
         for (int i = 0; i < 15; i++) {
-            gekozenParen.add(paren.get(willIndex++));
+             gekozenParen.add(paren.get(willIndex++));
         }
 
         List<String> uitvoer = new ArrayList<>();

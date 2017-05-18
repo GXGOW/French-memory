@@ -6,3 +6,6 @@
 /build/
 /dist/
 .DS_Store
+/JeuSerieux/dist/
+/JeuSerieux/build/
+/JeuSerieux/nbproject/private/
