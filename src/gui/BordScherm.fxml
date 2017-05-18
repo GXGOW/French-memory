@@ -9,152 +9,152 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="1000.0" type="Pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="img00" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="49.0" pickOnBounds="true">
+      <ImageView fx:id="img00" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="49.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img01" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="176.0" pickOnBounds="true">
+      <ImageView fx:id="img01" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="176.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img02" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="303.0" pickOnBounds="true">
+      <ImageView fx:id="img02" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="303.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img03" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="432.0" pickOnBounds="true">
+      <ImageView fx:id="img03" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="432.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img04" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="561.0" pickOnBounds="true">
+      <ImageView fx:id="img04" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="561.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img05" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="689.0" pickOnBounds="true">
+      <ImageView fx:id="img05" fitHeight="115.0" fitWidth="115.0" layoutX="57.0" layoutY="689.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img15" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="689.0" pickOnBounds="true">
+      <ImageView fx:id="img15" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="689.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img14" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="561.0" pickOnBounds="true">
+      <ImageView fx:id="img14" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="561.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img13" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="432.0" pickOnBounds="true">
+      <ImageView fx:id="img13" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="432.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img12" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="303.0" pickOnBounds="true">
+      <ImageView fx:id="img12" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="303.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img11" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="176.0" pickOnBounds="true">
+      <ImageView fx:id="img11" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="176.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img10" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="49.0" pickOnBounds="true">
+      <ImageView fx:id="img10" fitHeight="115.0" fitWidth="115.0" layoutX="191.0" layoutY="49.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img25" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="690.0" pickOnBounds="true">
+      <ImageView fx:id="img25" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="690.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img24" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="562.0" pickOnBounds="true">
+      <ImageView fx:id="img24" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="562.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img23" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="433.0" pickOnBounds="true">
+      <ImageView fx:id="img23" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="433.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img22" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="304.0" pickOnBounds="true">
+      <ImageView fx:id="img22" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="304.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img21" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="177.0" pickOnBounds="true">
+      <ImageView fx:id="img21" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="177.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img20" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="49.0" pickOnBounds="true">
+      <ImageView fx:id="img20" fitHeight="115.0" fitWidth="115.0" layoutX="325.0" layoutY="49.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img35" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="690.0" pickOnBounds="true">
+      <ImageView fx:id="img35" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="690.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img34" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="562.0" pickOnBounds="true">
+      <ImageView fx:id="img34" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="562.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img33" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="433.0" pickOnBounds="true">
+      <ImageView fx:id="img33" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="433.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img32" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="304.0" pickOnBounds="true">
+      <ImageView fx:id="img32" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="304.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img31" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="177.0" pickOnBounds="true">
+      <ImageView fx:id="img31" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="177.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img30" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="49.0" pickOnBounds="true">
+      <ImageView fx:id="img30" fitHeight="115.0" fitWidth="115.0" layoutX="459.0" layoutY="49.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img45" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="690.0" pickOnBounds="true">
+      <ImageView fx:id="img45" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="690.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img44" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="562.0" pickOnBounds="true">
+      <ImageView fx:id="img44" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="562.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img43" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="433.0" pickOnBounds="true">
+      <ImageView fx:id="img43" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="433.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img42" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="304.0" pickOnBounds="true">
+      <ImageView fx:id="img42" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="304.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img41" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="177.0" pickOnBounds="true">
+      <ImageView fx:id="img41" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="177.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img40" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="49.0" pickOnBounds="true">
+      <ImageView fx:id="img40" fitHeight="115.0" fitWidth="115.0" layoutX="593.0" layoutY="49.0" onMouseClicked="#draaiOm" pickOnBounds="true">
          <image>
             <Image url="@../images/achtergrond.png" />
          </image>
