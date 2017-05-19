@@ -38,8 +38,8 @@ public class BordSchermController extends Pane {
     private List<String> lijst = new ArrayList<>();
     private ImageView eersteOmgedraaid;
     private ImageView tweedeOmgedraaid;
-    private int aantalGevondenParen=0;
-    
+    private int aantalGevondenParen = 0;
+
     // <editor-fold defaultstate="collapsed" desc=" attributen FXML ">
     @FXML
     private GridPane gridPane;
@@ -50,7 +50,6 @@ public class BordSchermController extends Pane {
     @FXML
     private Label lblEinde;
     // </editor-fold>
-    
 
     public BordSchermController(DomeinController controller, Stage stage) {
         this.controller = controller;
@@ -68,15 +67,38 @@ public class BordSchermController extends Pane {
         Collections.shuffle(lijst, new Random(seed));
         // </editor-fold>       
 
-        // <editor-fold defaultstate="collapsed" desc=" Invullen kaarten">
+        // <editor-fold defaultstate="collapsed" desc=" Code invullen met wacht -> werkt NIET">
+//        for (int i = 0; i < 6; i++) {
+//            for (int j = 0; j < 5; j++) {
+//                int indexLijst = i * 5 + j;
+//                ImageView imageview = new ImageView(new Image(lijst.get(indexLijst)));
+//                imageview.setOnMouseClicked(omDraaien);
+//                gridPane.add(imageview, j, i);
+//            }
+//        }
+//        stage.show();
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException ex) {
+//            Logger.getLogger(BordSchermController.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
+//        for (int i = 0; i < 6; i++) {
+//            for (int j = 0; j < 5; j++) {
+//                int indexLijst = i * 5 + j;
+//                ImageView imgView = (ImageView) gridPane.getChildren().get(indexLijst);
+//                imgView.setImage(new Image("/images/achtergrond.png"));
+//                imgView.setOnMouseClicked(omDraaien);
+//            }
+//        }
+        // </editor-fold>
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 5; j++) {
-                ImageView imageview = new ImageView(new Image("/images/achtergrond.png"));
-                imageview.setOnMouseClicked(omDraaien);
-                gridPane.add(imageview, j, i);
+                ImageView imgView = new ImageView(new Image("/images/achtergrond.png"));
+                imgView.setOnMouseClicked(omDraaien);
+                gridPane.add(imgView, j, i);
             }
         }
-        // </editor-fold>
         stage.show();
     }
 
@@ -117,8 +139,10 @@ public class BordSchermController extends Pane {
                 tweedeOmgedraaid.setOnMouseClicked(null);
                 lblMelding.setText("Bravo! Ces deux cartes sont un couple!");
                 aantalGevondenParen++;
-                if(aantalGevondenParen ==15){
-                    btnControlleer.setDisable(true);
+                if (aantalGevondenParen == 15) {
+                    btnControlleer.setVisible(false);
+                    lblMelding.setVisible(false);
+                    gridPane.setVisible(false);
                     lblEinde.setText("Bravo!!!! Vous avez trouvé tous les couples!!!");
                 }
             } else {
@@ -128,7 +152,7 @@ public class BordSchermController extends Pane {
 
             }
             eersteOmgedraaid = null;
-            tweedeOmgedraaid = null;          
-        }   
+            tweedeOmgedraaid = null;
+        }
     }
 }
