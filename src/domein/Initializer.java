@@ -14,10 +14,10 @@ import java.util.List;
  */
 public class Initializer {
     
-    private List<Paar> paren;
+    private Paar[] paren;
 
     public Initializer() {
-        paren  = Arrays.asList(new Paar[]{
+        paren  = new Paar[]{
             new Paar("/images/unarbre.jpg", "/images/boom.png"),
             new Paar("/images/ungarçon.jpg", "/images/jongen.jpg"),
             new Paar("/images/unefille.jpg", "/images/meisje.jpg"),
@@ -53,14 +53,11 @@ public class Initializer {
             new Paar("/images/unecle.jpg", "/images/sleutel.jpg"),
             new Paar("/images/unearmoire.jpg", "/images/kast.jpg"),
             new Paar("/images/unechaussure.jpg", "/images/schoen.png"),
-            new Paar("/images/unevoiture.jpg", "/images/auto.jpg")
-                
-            
-            
-        });
+            new Paar("/images/unevoiture.jpg", "/images/auto.jpg")     
+        };
     }
 
-    public List<Paar> getParen() {
+    public Paar[] getParen() {
         return paren;
     }
 }

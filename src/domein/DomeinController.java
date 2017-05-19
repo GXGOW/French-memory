@@ -7,6 +7,7 @@ package domein;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
  */
 public class DomeinController {
 
-    private List<Paar> paren;
+    private Paar[] paren;
     private List<Speler> spelers;
     private int huidigeSpeler;
 
@@ -28,9 +29,12 @@ public class DomeinController {
 
     public List<String> selecteer() {
         List<Paar> gekozenParen = new ArrayList<>();
+        List<Paar> teKiezenParen = new ArrayList<>(Arrays.asList(paren));
         SecureRandom random = new SecureRandom();
         for (int i = 0; i < 15; i++) {
-            gekozenParen.add(paren.get(random.nextInt(paren.size())));
+            Paar geselecteerdPaar = teKiezenParen.get(random.nextInt(teKiezenParen.size()));
+            gekozenParen.add(geselecteerdPaar);
+            teKiezenParen.remove(geselecteerdPaar);
         }
 
         List<String> uitvoer = new ArrayList<>();
