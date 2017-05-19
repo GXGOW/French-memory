@@ -38,10 +38,14 @@ public class DomeinController {
         }
 
         List<String> uitvoer = new ArrayList<>();
-        for (Paar gekozenPaar : gekozenParen) {
+        /*for (Paar gekozenPaar : gekozenParen) {
             uitvoer.add(gekozenPaar.getWoord());
             uitvoer.add(gekozenPaar.getPad());
-        }
+        }*/
+        gekozenParen.stream().forEach(o -> {
+            uitvoer.add(o.getWoord());
+            uitvoer.add(o.getPad());
+        });
 
         return uitvoer;
     }

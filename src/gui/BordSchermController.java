@@ -11,9 +11,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.Timer;
+import java.util.TimerTask;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -65,41 +64,33 @@ public class BordSchermController extends Pane {
         lijst = this.controller.selecteer();
         long seed = System.nanoTime();
         Collections.shuffle(lijst, new Random(seed));
+        lblEinde.setVisible(false);
         // </editor-fold>       
 
         // <editor-fold defaultstate="collapsed" desc=" Code invullen met wacht -> werkt NIET">
-//        for (int i = 0; i < 6; i++) {
-//            for (int j = 0; j < 5; j++) {
-//                int indexLijst = i * 5 + j;
-//                ImageView imageview = new ImageView(new Image(lijst.get(indexLijst)));
-//                imageview.setOnMouseClicked(omDraaien);
-//                gridPane.add(imageview, j, i);
-//            }
-//        }
-//        stage.show();
-//        try {
-//            Thread.sleep(5000);
-//        } catch (InterruptedException ex) {
-//            Logger.getLogger(BordSchermController.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        
-//        for (int i = 0; i < 6; i++) {
-//            for (int j = 0; j < 5; j++) {
-//                int indexLijst = i * 5 + j;
-//                ImageView imgView = (ImageView) gridPane.getChildren().get(indexLijst);
-//                imgView.setImage(new Image("/images/achtergrond.png"));
-//                imgView.setOnMouseClicked(omDraaien);
-//            }
-//        }
-        // </editor-fold>
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 5; j++) {
-                ImageView imgView = new ImageView(new Image("/images/achtergrond.png"));
-                imgView.setOnMouseClicked(omDraaien);
-                gridPane.add(imgView, j, i);
+                int indexLijst = i * 5 + j;
+                ImageView imageview = new ImageView(new Image(lijst.get(indexLijst)));
+                imageview.setOnMouseClicked(omDraaien);
+                gridPane.add(imageview, j, i);
             }
         }
         stage.show();
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 6; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        int indexLijst = i * 5 + j;
+                        ImageView imgView = (ImageView) gridPane.getChildren().get(indexLijst);
+                        imgView.setImage(new Image("/images/achtergrond.png"));
+                        imgView.setOnMouseClicked(omDraaien);
+                    }
+                }
+            }
+        }, 5000);
     }
 
     final EventHandler<MouseEvent> omDraaien = new EventHandler<MouseEvent>() {
@@ -144,6 +135,7 @@ public class BordSchermController extends Pane {
                     lblMelding.setVisible(false);
                     gridPane.setVisible(false);
                     lblEinde.setText("Bravo!!!! Vous avez trouvé tous les couples!!!");
+                    lblEinde.setVisible(true);
                 }
             } else {
                 lblMelding.setText("Dommage! Ces deux cartes ne sont pas un couple!");
